@@ -3,6 +3,7 @@ import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import About from '..';
 
+// The cleanup function is used to remove components from the DOM to prevent memory leaking, as well as variable or data collisions between tests that could corrupt test results.
 afterEach(cleanup);
 
 describe('About component', () => {
@@ -19,5 +20,3 @@ describe('About component', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
-// The cleanup function is used to remove components from the DOM to prevent memory leaking, as well as variable or data collisions between tests that could corrupt test results.
